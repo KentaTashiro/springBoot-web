@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.example.demo.db.mapper.StockInfoMapper" >
+
+<!-- SQLの実行結果を格納する型を定義 -->
+  <resultMap id="BaseResultMap" type="com.example.demo.db.entity.StockInfo" >
+    <result column="stock_id" property="stockId" jdbcType="VARCHAR" />
+    <result column="stock_ticker" property="stockTicker" jdbcType="VARCHAR" />
+    <result column="own_price" property="ownPrice" jdbcType="DOUBLE" />
+    <result column="own_count" property="ownCount" jdbcType="DOUBLE" />
+  </resultMap>
+
+<!-- SELECT文を定義 -->
+  <select id="search" resultMap="BaseResultMap">
+    SELECT * FROM stock_info WHERE stock_id = #{id}
+  </select>
+
+</mapper>
+
+<!-- StockInfoMapper.java：src/main/java配下に「StockInfoMapper.xml」の階層（com.example.demo.mapper）と同様のパッケージで配置する。 -->

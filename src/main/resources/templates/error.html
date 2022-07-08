@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Hello</title>
+<meta charset="utf-8" />
+</head>
+
+<body>
+
+	<h1>エラー画面</h1>
+	<form action="#" th:action="@{/}" th:object="${errorForm}" method="get">
+		<div>
+			<p>発生例外が発生しました。</p>
+			<p>1を入力した場合は例外をキャッチしてエラー画面に遷移させます。</p>
+		</div>
+		<p><input type="submit" value="戻る" /></p>
+	</form>
+</body>
+
+</html>
