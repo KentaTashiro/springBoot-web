@@ -1,8 +1,8 @@
 ◆language  
->  　　java  
+>  java  
 
 ◆framework  
->  　　springBoot, Mybatis  
+>  springBoot, Mybatis  
 
 ◆summary  
 >  DB接続（Mybatis）：localのmySQLからデータをSELECT  
